@@ -165,9 +165,10 @@ header.hero{padding:72px 0 60px;background:
 .res .ric{color:var(--accent);font-size:17px;flex-shrink:0}
 footer{border-top:1px solid var(--line);padding:36px 0 46px;color:var(--ink2);font-size:13.5px}
 .tablewrap{overflow-x:auto}
-table{border-collapse:collapse;width:100%;font-size:14px;min-width:560px}
-th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
-th{background:var(--surface2);font-family:var(--serif)}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:560px;background:var(--surface);color:var(--ink)}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;color:var(--ink)}
+th{background:var(--surface2);color:var(--ink);font-family:var(--serif)}
+td{background:var(--surface)}
 .tlayout{display:grid;grid-template-columns:120px 1fr;gap:26px;align-items:start}
 .tlsvg{width:120px}
 @media(max-width:640px){.tlayout{grid-template-columns:1fr}.tlsvg{display:none}}
@@ -263,7 +264,7 @@ th{background:var(--surface2);font-family:var(--serif)}
       </svg>
       <div style="display:grid;gap:14px" id="tlcards"></div>
     </div>
-    <button class="copybtn" style="margin-top:18px" onclick="downloadPoster()" data-en="⬇️ Download classroom poster" data-zh="⬇️ 下載課室海報">⬇️ Download classroom poster</button>
+    <button class="copybtn" style="margin-top:18px" onclick="downloadPoster()" data-en="⬇️ Download Poster" data-zh="⬇️ 下載海報">⬇️ Download Poster</button>
   </div>
 </section>
 
@@ -713,18 +714,20 @@ async function downloadPoster(){
   x.font='54px serif';x.fillStyle='#1e2226';x.fillText(t[0],tx+tw/2,y+70);
   x.font='20px Georgia, serif';x.fillText(t[1],tx+tw/2,y+112,tw-16);
   x.font='20px "Songti TC", "PingFang HK", serif';x.fillText(t[2],tx+tw/2,y+145,tw-16);});
- y+=200;
- x.strokeStyle='#2f6486';x.lineWidth=4;rr(70,y,W-140,230,16);x.stroke();
- x.font='60px serif';x.fillText('📋',150,y+130);
+ y+=196;
+ x.strokeStyle='#2f6486';x.lineWidth=4;rr(70,y,W-140,340,16);x.stroke();
  x.textAlign='left';
- x.fillStyle='#1e2226';x.font='bold 28px Georgia, "PingFang HK", serif';x.fillText('【AI Usage Disclosure Statement AI 使用聲明】',230,y+58);
- x.font='24px Georgia, "Songti TC", serif';
- x.fillText('Tool used 使用工具：____________　Purpose 用途：____________',230,y+118);
- x.fillText('Verification 核實：I verified the facts by 本人已透過 ________ 核實。',230,y+165);
- x.font='italic 22px Georgia, serif';x.fillStyle='#555';x.fillText('Required whenever AI is used 使用 AI 時必須附上',230,y+205);
- x.textAlign='center';y+=280;
+ x.fillStyle='#1e2226';x.font='bold 27px Georgia, "PingFang HK", serif';x.fillText('📋 【AI Usage Disclosure Statement AI 使用聲明】',95,y+58,1050);
+ x.font='23px Georgia, "Songti TC", serif';
+ x.fillText('Assignment 功課：____________　Level 級別：🟡 Yellow / 🟢 Green',95,y+112,1050);
+ x.fillText('Tool used 使用工具：____________　Purpose 用途：____________',95,y+156,1050);
+ x.fillText('Verification 核實：I verified the facts by 本人已透過 ________ 核實。',95,y+200,1050);
+ x.font='italic 22px Georgia, "Songti TC", serif';x.fillStyle='#444';
+ x.fillText('I declare the thinking, analysis & conclusions in this work are my own.',95,y+250,1050);
+ x.fillText('本人聲明此作品之思考、分析及結論均為本人所作，並已誠實申報。',95,y+290,1050);
+ x.textAlign='center';y+=390;
  x.fillStyle='#555';x.font='20px Georgia, "Songti TC", serif';
- x.fillText("Queen's College IT Committee 皇仁書院資訊科技統籌委員會 · 勤有功 — Labor Omnia Vincit",W/2,Math.min(y+40,H-50),1080);
+ x.fillText("Queen's College IT Committee 皇仁書院資訊科技統籌委員會",W/2,Math.min(y+30,H-40),1080);
  const url=c.toDataURL('image/png');
  try{const aEl=document.createElement('a');aEl.download='QC-AI-Traffic-Light-Poster.png';aEl.href=url;document.body.appendChild(aEl);aEl.click();aEl.remove();}catch(e){}
  showImage(url,'QC-AI-Traffic-Light-Poster.png');

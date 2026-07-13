@@ -55,7 +55,8 @@ nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,
 .navin{display:flex;align-items:center;gap:18px;padding:12px 22px;max-width:1060px;margin:0 auto}
 .brand{font-family:var(--serif);font-weight:700;font-size:17px;white-space:nowrap}
 .brand small{display:block;font-size:11px;color:var(--ink2);font-weight:400;letter-spacing:.06em}
-.navlinks{display:flex;gap:4px;margin-left:auto;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.navlinks{display:flex;gap:2px;margin-left:auto;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;-ms-overflow-style:none}
+.navlinks::-webkit-scrollbar{display:none;width:0;height:0}
 .navlinks a{color:var(--ink2);text-decoration:none;font-size:13.5px;padding:6px 10px;border-radius:8px;white-space:nowrap}
 .navlinks a:hover{background:var(--surface2);color:var(--ink)}
 .langbtn{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:600;flex-shrink:0}
@@ -194,11 +195,11 @@ td{background:var(--surface)}
     <div class="brand" style="display:flex;align-items:center;gap:10px"><img id="navlogo" alt="Queen's College crest" style="height:40px;width:auto"><div>Queen's College<small data-en="Digital Education" data-zh="數字教育">Digital Education</small></div></div>
     <div class="navlinks">
       <a href="#policy" data-en="Policy" data-zh="政策">Policy</a>
-      <a href="#traffic" data-en="Traffic Light" data-zh="交通燈">Traffic Light</a>
-      <a href="#quiz" data-en="Quiz" data-zh="自我測試">Quiz</a>
-      <a href="#declare" data-en="AI Declaration" data-zh="AI 使用聲明">AI Declaration</a>
-      <a href="#study" data-en="Study Guide" data-zh="學習指南">Study Guide</a>
-      <a href="#wellbeing" data-en="Wellbeing" data-zh="身心健康">Wellbeing</a>
+      <a href="#traffic" data-en="Traffic" data-zh="交通燈">Traffic</a>
+      <a href="#quiz" data-en="Quiz" data-zh="測試">Quiz</a>
+      <a href="#declare" data-en="Declare" data-zh="聲明">Declare</a>
+      <a href="#study" data-en="Study" data-zh="學習">Study</a>
+      <a href="#wellbeing" data-en="Wellbeing" data-zh="身心">Wellbeing</a>
       <a href="#teachers" data-en="Teachers" data-zh="教師">Teachers</a>
       <a href="#parents" data-en="Parents" data-zh="家長">Parents</a>
       <a href="#resources" data-en="Resources" data-zh="資源">Resources</a>
